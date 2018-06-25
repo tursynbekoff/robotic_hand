@@ -72,7 +72,7 @@ void loop() {
    if((rotateVal2-sensorValue2)>=-5 && (rotateVal2-sensorValue2)<=5 ){
     digitalWrite(mot2p, LOW);
     digitalWrite(mot2m, LOW);
-   }else if (rotateVal1>sensorValue1){
+   }else if (rotateVal2>sensorValue2){
     digitalWrite(mot2p, HIGH); //OPENS INDEX finger
     digitalWrite(mot2m, LOW);              
    }else if(rotateVal2<sensorValue2){
