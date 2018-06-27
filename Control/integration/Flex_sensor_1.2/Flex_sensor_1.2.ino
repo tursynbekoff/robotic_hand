@@ -1,38 +1,47 @@
-  
-const int buttonPin1 = 11;
-const int buttonPin2 = 2;  
-int AIN_1 = 12;
-int AIN_2 = 13;
-int BIN_1 = 2;
-int BIN_2 = 3;
-//int LED = 8;
+
+int AIN_1 = 3;
+int AIN_2 = 2;
+int BIN_1 = 9;
+int BIN_2 = 8;
+
 int buttonState1 = 0;
 int buttonState2 = 0;
   
-int encoder0PinA = 28;
-int encoder0PinB = 32;
+int encoder0PinA = 19;
+int encoder0PinB = 18;
 int encoder0Pos = 0;
 int encoder0PinALast = LOW;
 int n0 = LOW;
 long pos0 = 0;
 
-int encoder1PinA = 36;
-int encoder1PinB = 40;
+int encoder1PinA = 0;
+int encoder1PinB = 1;
 int encoder1Pos = 0;
 int encoder1PinALast = LOW;
 int n1 = LOW;
 long pos1 = 0;
 
-int encoderPosR = 0;
-//int encoderPos = 0;
+int encoder1PosR = 0;
+int encoder0PosR = 0;
+unsigned long serialData;
+int inbyte; 
+int digitalState;
+int pinNumber;
+int analogRate;
+
+int sensorVal1;
+int sensorVal2;
+int sensorVal3;
+
+int rotateVal1;
+int rotateVal2;
+int rotateVal3;
 
 
 unsigned long time;
 
 void setup() {
   // put your setup code here, to run once:
-  pinMode(buttonPin1, INPUT);
-  pinMode(buttonPin2, INPUT);
   pinMode(AIN_1, OUTPUT);
   pinMode(AIN_2, OUTPUT);
   pinMode(BIN_1, OUTPUT);
@@ -43,7 +52,7 @@ void setup() {
   pinMode(encoder1PinB, INPUT);
 //  pinMode(LED, OUTPUT);
   //Serial.println("start"); 
-  Serial.begin (19200);
+  Serial.begin (9600);
 }
 
 
@@ -51,12 +60,12 @@ void setup() {
 void forward(int x, int y) {
   digitalWrite(x, LOW);
   //digitalWrite(AIN_2, HIGH);
-  analogWrite(y, 93);
+  analogWrite(y, 255);
 }
 
 void reverse(int x, int y) {
   //digitalWrite(AIN_1, HIGH);
-  analogWrite(x, 93);
+  analogWrite(x, 255);
   digitalWrite(y, LOW);
 }
 
@@ -64,119 +73,115 @@ void Stop(int x, int y) {
   digitalWrite(x, LOW);
   digitalWrite(y, LOW);
 }
-int encoderPinALastR = 0;
+int encoder0PinALastR = 0;
+int encoder1PinALastR =0;
 
+long serialRead()
+{
+  serialData = 0;
+  while (inbyte != '/')
+  {
+    inbyte = Serial.read();
+    if (inbyte > 0 && inbyte != '/')
+    {
+      serialData = serialData * 10 + inbyte - '0';  
+      Serial.println(serialData);
+    }
+  }
+  inbyte = 0; 
+  return serialData;
+}
 
-void Read(int n, int encoderPinA, int encoderPinB, int encoderPos){
+void Read1(){
  // encoderPosR = encoderPos;
   
-  n = digitalRead(encoderPinA);
-  if ((encoderPinALastR == LOW) && (n == HIGH)) {
-    if (digitalRead(encoderPinB) == LOW) {
-      encoderPosR--;
+  n0 = digitalRead(encoder0PinA);
+  if ((encoder0PinALastR == LOW) && (n0 == HIGH)) {
+    if (digitalRead(encoder0PinB) == LOW) {
+      encoder0PosR--;
     } else {
-      encoderPosR++;
+      encoder0PosR++;
     }
-    pos0 = encoderPosR;
-    Serial.print (encoderPosR);
+    pos0 = encoder0PosR;
+    Serial.print (encoder0PosR);
     Serial.print ("\n");
-    encoderPos = encoderPosR;
+    encoder0Pos = encoder0PosR;
   }
-  encoderPinALastR = n;
+  encoder0PinALastR = n0;
   }
 
-//void MoveFrwd() {
-//  if (pos>20){
-//  Stop(); 
-//  }
-//  else{
-//      forward();
-//      Read(n0, encoder0PinA, encoder0PinALast, encoder0PinB, encoder0Pos, pos0);
-//  }
-//}
-//
-//void MoveBkwd() {
-//  if (pos<-20){
-//  Stop(); 
-//  }
-//  else{
-//      reverse(AIN_1,AIN_2);
-//      Read();
-//  }
-//}
 
-void af(){
+void Read2(){
+ // encoderPosR = encoderPos;
   
-      if (pos0>40){
-      Stop(AIN_1, AIN_2); 
-      }
-      else{
-          forward(AIN_1, AIN_2);
-          Read(n0, encoder0PinA, encoder0PinB, encoder0Pos);
-      }
+  n1 = digitalRead(encoder1PinA);
+  if ((encoder1PinALastR == LOW) && (n1 == HIGH)) {
+    if (digitalRead(encoder1PinB) == LOW) {
+      encoder1PosR--;
+    } else {
+      encoder1PosR++;
+    }
+    pos1 = encoder1PosR;
+    Serial.print (encoder1PosR);
+    Serial.print ("\n");
+    encoder1Pos = encoder1PosR;
   }
-
-void ar(){
-  
-      if (pos0<0){
-      Stop(AIN_1, AIN_2); 
-      }
-      else{
-          reverse(AIN_1, AIN_2);
-          Read(n0, encoder0PinA, encoder0PinB, encoder0Pos);
-      }
+  encoder1PinALastR = n1;
   }
-
-void br(){
-  
-      if (pos0>350){
-      Stop(BIN_1, BIN_2); 
-      }
-      else{
-          reverse(BIN_1, BIN_2);
-          Read(n1, encoder1PinA, encoder1PinB, encoder1Pos);
-      }  
-  }
-
- void bf(){
-  
-      if (pos0<0){
-      Stop(BIN_1, BIN_2); 
-      }
-      else{
-            forward(BIN_1, BIN_2);
-            Read(n1, encoder1PinA, encoder1PinB, encoder1Pos);
-      } 
-  } 
 
   
 
 void loop() {
-
-    int sensorValue = analogRead(A0);
-    // Convert the analog reading (which goes from 0 - 1023) to a voltage (0 - 5V):
-    float voltage = sensorValue * (5.0 / 1023.0);
-
-  //  Serial.println(voltage);
-  //  Serial.print("\n"); 
-
-
-    if (voltage < 3.53 && voltage > 3.0){
-       Stop(BIN_1, BIN_2); 
-     //  Stop(AIN_1, AIN_2);
-//       digitalWrite (LED, LOW);
+  
+ Read1();
+ Read2();
+ if (Serial.available() > 0){
+  serialRead();
+  switch(serialData)
+   {
+    case 1:
+      { serialRead();
+        rotateVal1 = serialData;
+       // Serial.print("Value of sensor:  ");
+       // Serial.print(sensorValue1);
+       // Serial.print("\n");
+        Serial.print("Value of rotation thumb:  ");
+        Serial.print(rotateVal1);
+        Serial.print("\n");
+        break;
       }
-    else if(voltage < 3.530){
-    //  af();
-      bf();
-      //Stop(AIN_1, AIN_2);
-    } 
-    
-    else if(voltage > 3.00) {
-    //  ar();
-      br();
-      //Stop(AIN_1, AIN_2);
-//      digitalWrite(LED, HIGH);
-    }
-
+    case 2:
+      { serialRead();
+        rotateVal2 = serialData;
+       // Serial.print("Value of sensor:  ");
+       // Serial.print(sensorValue2);
+       // Serial.print("\n");
+        Serial.print("Value of rotation joint:  ");
+        Serial.print(rotateVal2);
+        Serial.print("\n");
+        break;
+      }
+   }
+ }
+ if(pos0 < rotateVal1){
+  digitalWrite(BIN_1, LOW);
+  digitalWrite(BIN_2, HIGH);
+ }else if(pos0 > rotateVal1){
+  digitalWrite(BIN_1, HIGH);
+  digitalWrite(BIN_2, LOW);
+ }else if((pos0-rotateVal1)>-1 && (pos0-rotateVal1)<1)
+  digitalWrite(BIN_1, LOW);
+  digitalWrite(BIN_2, LOW);
+  
+ if(pos1 < rotateVal2){
+  digitalWrite(AIN_1, HIGH);
+  digitalWrite(AIN_2, LOW);
+ }else if(pos1 > rotateVal2){
+  digitalWrite(AIN_1, LOW);
+  digitalWrite(AIN_2, HIGH);
+ }else if((pos1-rotateVal2)>-1 && (pos0-rotateVal2)<1){
+  digitalWrite(AIN_1, LOW);
+  digitalWrite(AIN_2, LOW);
+ }
+ 
 }
