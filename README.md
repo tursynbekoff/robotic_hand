@@ -8,7 +8,7 @@ The anthropomorphic hand cnosist of mechanical design, electrical components lik
 ## 3D Design of the Hand
 The robotic hand is still under iprovement and development stage. Here is shown previous models and developmemt steps that have been done. First model of the hand was done not by me and in a limited period of time. My goal is to improve design and eliminate problems from initial model. 
 
-### Problems of initial model
+### Problems of the initial model
 * Thumb was broken
 * Backlash between parts 
 * Wires were exposed to mechanical deformation
