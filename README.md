@@ -44,9 +44,11 @@ The next iteration was connection of mechanical part with electrical components.
 
 As a result, the final CAD model of the thumb can perform extension, flexion and abduction, adduction movements. The main difference between initial and the final model of the thumb, it can perform under-actuated adaptive motion, which means the thumb can wrap around object with complex geometrical shape and simplifies the control of the thumb.
 
-![Alt Text](https://github.com/tursynbekoff/robotic_hand/blob/master/Demo.MOV)
+
 
 ### Holding objects
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://youtu.be/hmZBOrk-Xx8)
 
 The performance of the hand with new thumb was tested with various objects. In the test
 there were objects with different shapes: cylindrical, spherical and brick shaped. The hand
