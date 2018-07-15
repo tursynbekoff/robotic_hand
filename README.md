@@ -1,7 +1,7 @@
 # Development of an Autonomous Robotic Pick and Place Laboratory Setup for Intelligent Industrial Automation
     
  ![Alt Text](https://raw.githubusercontent.com/tursynbekoff/robotic_hand/master/real_VS_solid.jpg)
-The anthropomorphic hand cnosist of mechanical design, electrical components like 12V DC motor, arduino microcontroller wireing and PCB. In the following parts there will be full desccription of the components and source files could be found in the folders
+The anthropomorphic hand cnosist of mechanical design, electrical components like 12V DC motor, arduino microcontroller wireing and PCB. In the following parts there will be full desccription of the components and source files could be found in the folders above
 *  3D Design of the Hand 
 *  Control of the hand 
 
@@ -42,7 +42,7 @@ The next iteration was connection of mechanical part with electrical components.
 ![Alt Text](https://github.com/tursynbekoff/robotic_hand/blob/master/REPORT_git/harness_wire-min.jpg)
 ![Alt Text](https://github.com/tursynbekoff/robotic_hand/blob/master/REPORT_git/cord-min.JPG)
 
-As a result, the final CAD model of the thumb can perform extension, flexion and abduction, adduction movements. The main difference between initial and the final model of the thumb, it can perform under-actuated adaptive motion, which means the thumb can wrap around object with complex geometrical shape and simplifies the control of the thumb. Full up to date CAD model of the hand is [here](https://github.com/tursynbekoff/robotic_hand/tree/master/CAD).
+As a result, the final CAD model of the thumb can perform extension, flexion and abduction, adduction movements. The main difference between initial and the final model of the thumb, it can perform under-actuated adaptive motion, which means the thumb can wrap around object with complex geometrical shape and simplifies the control of the thumb. Full up-to-date CAD model of the hand is [here](https://github.com/tursynbekoff/robotic_hand/tree/master/CAD).
 
 
 
