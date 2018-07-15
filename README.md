@@ -1,6 +1,7 @@
 # Development of an Autonomous Robotic Pick and Place Laboratory Setup for Intelligent Industrial Automation
-
+    
  ![Alt Text](https://raw.githubusercontent.com/tursynbekoff/robotic_hand/master/real_VS_solid.jpg)
+The anthropomorphic hand cnosist of mechanical design, electrical components like 12V DC motor, arduino microcontroller wireing and PCB. In the following parts there will be full desccription of the components and source files could be found in the folders
 *  3D Design of the Hand 
 *  Control of the hand 
 
@@ -17,9 +18,50 @@ The robotic hand is still under iprovement and development stage. Here is shown 
  
 The problem with backlash was solved by replacing old parts with new ones. Decreasing the backlash improved sensor readings and precision of the hand. The new design of the "proximal phalanges" of the hand allowed to decrease backlash and new placement for position sensors and locate the wiring of the sensors inside the hand. The advantage of placing position sensor inside the finger, the data readings from sensor are cleaner and new placement also secures wiring from mechanical exposure.
 ### Setps of development of the new design of the thumb
+
 The first picture demostrates initial design of the thumb
+
 ![Alt Text](https://github.com/tursynbekoff/robotic_hand/blob/master/REPORT_git/init_1.jpg)
 The first updated design of the thumb consisted from following configuration: exion mechanism is performed with aid of brushed DC motor with integrated gearbox. The worm gear rotates spur gear which in turn performs extension, exion movements. Moreover, the mechanism is non-backdrivable and performs in a positive way at grabbing operation. In addition, thumb can perform underactuated adaptive closing through linkage connections. While extension, flexion operations thumb can bend depending on the placement of the object and wrap around that object. The second brushed DC motor rotates thumb with spur gear about its axis at "thumb's up" position. Thus, the thumb could perform only extension, flexion movements. However, the thumb in this configuration cannot perform abduction, adduction motions. As a result, the thumb cannot perform grabbing operation and further changes were made.
 
+![Alt Text](https://github.com/tursynbekoff/robotic_hand/blob/master/REPORT_git/rotat_one.jpg)
+
+The second design of the thumb is different from initial design with the placement of the second brushed DC motor. Middle shaft were used to rotate thumb about palm plane. The thumb moves inward and outward from the palm plane, that means it can perform extension, exion as well as abduction, adduction movements. However, this mechanism needs more space and eventually the design of the thumb were rebuilt.
+![Alt Text](https://github.com/tursynbekoff/robotic_hand/blob/master/REPORT_git/last_1.jpg)
+
+The next CAD model of the thumb can rotate about its base and can perform  flexion, extension and adduction. Placing the thumb opposite to index finger it can perform extension, flexion, abduction and adduction movements. In addition, this design does not need much space and can be compact in size. Space is needed only for DC motor. As a result, this CAD design is more effcient. The next design iterations  are fundamentally the same. The placement of the first DC motor is the same and adaptive mechanism is rotated to 90 degrees and placed opposite to index finger. The second brushed DC motor rotates the thumb around index finger axis by using bevel gear. The advantage using bevel gear instead of spur gear, it conserves space. As a result, we started printing the parts.
+
+![Alt Text](https://github.com/tursynbekoff/robotic_hand/blob/master/REPORT_git/inter_mid_des-min.jpg)
  
+The last design: 
+
+![Alt Text](https://github.com/tursynbekoff/robotic_hand/blob/master/REPORT_git/last-min.jpg)
+
+The next iteration was connection of mechanical part with electrical components. Due to dynamic configuration of the thumb and moving mechanical structures of the hand it created diffculties with wiring. DC motors, that were used in the project, has embedded quadratic encoders, therefore each motor has six pins to connect. The first DC motor is integrated in the moving structure that rotates around its axis. The second DC motor rotates the structure with the first DC motor. The requirement for the harness is flexibility and transmitting rated power for the motor. As a result, the wiring loom was made from copper wires that widely used in headphones. In addition, mechanical changes were made for harness wiring, it goes through narrow slot in the moving part and protected from mechanical deformation. However, the part of the wire harness which connects dynamic part with static part is exposed to bending. To secure robustness of the exposed part of the harness, insulating tape was used. 
+
+![Alt Text](https://github.com/tursynbekoff/robotic_hand/blob/master/REPORT_git/harness_wire-min.jpg)
+![Alt Text](https://github.com/tursynbekoff/robotic_hand/blob/master/REPORT_git/cord-min.JPG)
+
+As a result, the final CAD model of the thumb can perform extension, flexion and abduction, adduction movements. The main difference between initial and the final model of the thumb, it can perform under-actuated adaptive motion, which means the thumb can wrap around object with complex geometrical shape and simplifies the control of the thumb.
+
+![Alt Text](https://github.com/tursynbekoff/robotic_hand/blob/master/Demo.MOV)
+
+### Holding objects
+
+The performance of the hand with new thumb was tested with various objects. In the test
+there were objects with different shapes: cylindrical, spherical and brick shaped. The hand
+performed grabbing with aid of manual manipulation. The hand securely holds all objects and thumb performs adaptive gripping of the objects. Underactuated adaptive bending of the thumb helps to grab and to hold objects. However, the length and the shape of the thumb should be tuned for versatility. The grip of the thumb can be improved by adding nonbackdivable mechanism where bevel gear is placed. Other possible way to improve the grip, by resin coating on the contact point with the object, on the inner surface of the thumb.
+
+![Alt Text](https://github.com/tursynbekoff/robotic_hand/blob/master/REPORT_git/sph3-min.JPG)
+![Alt Text](https://github.com/tursynbekoff/robotic_hand/blob/master/REPORT_git/cyl3-min.JPG)
+![Alt Text](https://github.com/tursynbekoff/robotic_hand/blob/master/REPORT_git/bri2-min.JPG)
+![Alt Text](https://github.com/tursynbekoff/robotic_hand/blob/master/REPORT_git/screw-min.JPG)
+![Alt Text](https://github.com/tursynbekoff/robotic_hand/blob/master/REPORT_git/pen-min.JPG)
+
+In addition, household objects with complex geometrical configuration, as screwdriver, were tested. The hand can grab the objects with external manipulation and securely hold objects at specific position. The hand has potential to be used as prosthesis.
+
+## Control of the hand
+
+
+
 
