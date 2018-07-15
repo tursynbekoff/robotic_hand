@@ -1,7 +1,6 @@
 # Development of an Autonomous Robotic Pick and Place Laboratory Setup for Intelligent Industrial Automation
 
-![Hand](robotic_hand/master/real_VS_solid.jpg)
-
+Format: ![Alt Text](https://raw.githubusercontent.com/tursynbekoff/robotic_hand/master/real_VS_solid.jpg)
 *  3D Design of the Hand 
 *  Control of the hand 
 
