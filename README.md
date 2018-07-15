@@ -42,7 +42,7 @@ The next iteration was connection of mechanical part with electrical components.
 ![Alt Text](https://github.com/tursynbekoff/robotic_hand/blob/master/REPORT_git/harness_wire-min.jpg)
 ![Alt Text](https://github.com/tursynbekoff/robotic_hand/blob/master/REPORT_git/cord-min.JPG)
 
-As a result, the final CAD model of the thumb can perform extension, flexion and abduction, adduction movements. The main difference between initial and the final model of the thumb, it can perform under-actuated adaptive motion, which means the thumb can wrap around object with complex geometrical shape and simplifies the control of the thumb.
+As a result, the final CAD model of the thumb can perform extension, flexion and abduction, adduction movements. The main difference between initial and the final model of the thumb, it can perform under-actuated adaptive motion, which means the thumb can wrap around object with complex geometrical shape and simplifies the control of the thumb. Full up to date CAD model of the hand is [here](https://github.com/tursynbekoff/robotic_hand/tree/master/CAD).
 
 
 
@@ -64,11 +64,11 @@ In addition, household objects with complex geometrical configuration, as screwd
 
 ## Control of the hand
 
-All fingers of the hand equipped with encoders: 2 quadrature encoders for thumb and position sensor for other fingers. This is necessary to receive position feedback and avoid critical points, that can destroy finger structure and motor. There are six brushless DC motors that require dual motor drivers (DRV8835). For dual motor driver, 4 motor control signals (2 signal per motor) is sent from Arduino. The signal to the motors must be PWM, while the other zero to move in one direct, the opposite to move in reverse direction. If both signals are zero, motor stops. Apart from that, 10V with 1A power is connected to Vcc that is supplied to the motors. Initially all the electrical components were connected to the breadbord. Breadbord caused many hardware problems with robustness of the system. As a result, the idea of creating PCB was in demand. PCB was designed in CicuitMaker(open source free software). New PCB eliminates potential hardware failures and serves as a 6-channel Arduino motor shield and I/O for digital and analog pins. In addition, to secure from environment and potential mechanical failure, housing was developed and files for housing could be found in the folder Housing.
+All fingers of the hand equipped with encoders: 2 quadrature encoders for thumb and position sensor for other fingers. This is necessary to receive position feedback and avoid critical points, that can destroy finger structure and motor. There are six brushless DC motors that require dual motor drivers (DRV8835). For dual motor driver, 4 motor control signals (2 signal per motor) is sent from Arduino. The signal to the motors must be PWM, while the other zero to move in one direct, the opposite to move in reverse direction. If both signals are zero, motor stops. Apart from that, 10V with 1A power is connected to Vcc that is supplied to the motors. Initially all the electrical components were connected to the breadbord. Breadbord caused many hardware problems with robustness of the system. As a result, the idea of creating PCB was in demand. PCB was designed in CicuitMaker(open source free software). New PCB eliminates potential hardware failures and serves as a 6-channel Arduino motor shield and I/O for digital and analog pins. In addition, to secure from environment and potential mechanical failure, housing was developed and files for housing could be found in the folder [Housing](https://github.com/tursynbekoff/robotic_hand/tree/master/Housing).
 ![Alt Text](https://github.com/tursynbekoff/robotic_hand/blob/master/REPORT_git/PCB.jpg)
 ![Alt Text](https://github.com/tursynbekoff/robotic_hand/blob/master/REPORT_git/PCB_old_vs_new.jpg)
 ![Alt Text](https://github.com/tursynbekoff/robotic_hand/blob/master/REPORT_git/new_PCB_housing.jpg)
-Full PCB design could be found from the following [link](https://circuitmaker.com/Projects/Details/Talgat-Tursynbekov/Robotic-hand)
+Full PCB design could be found from the following [link](https://circuitmaker.com/Projects/Details/Talgat-Tursynbekov/Robotic-hand). Full scrip for hand controll is [here](https://github.com/tursynbekoff/robotic_hand/tree/master/Control/hand_control_1.0). 
 
 
 
