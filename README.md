@@ -48,7 +48,7 @@ As a result, the final CAD model of the thumb can perform extension, flexion and
 
 ### Holding objects
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://youtu.be/hmZBOrk-Xx8)
+[![IMAGE ALT TEXT HERE](https://github.com/tursynbekoff/robotic_hand/blob/master/REPORT_git/youtube.PNG)](https://youtu.be/hmZBOrk-Xx8)
 
 The performance of the hand with new thumb was tested with various objects. In the test
 there were objects with different shapes: cylindrical, spherical and brick shaped. The hand
