@@ -1,7 +1,7 @@
 # Development of an Autonomous Robotic Pick and Place Laboratory Setup for Intelligent Industrial Automation
     
  ![Alt Text](https://raw.githubusercontent.com/tursynbekoff/robotic_hand/master/real_VS_solid.jpg)
-The anthropomorphic hand cnosist of mechanical design, electrical components like 12V DC motor, arduino microcontroller wiring and PCB. In the following parts there will be full description of the mechanican and electrical components and source files could be found in the folders above
+The anthropomorphic hand consist of mechanical design and electrical components like 12V DC motor, arduino microcontroller wiring and PCB. In the following parts there will be full description of the mechanican and electrical components and source files could be found in the folders above
 *  3D Design of the Hand 
 *  Control of the hand 
 
