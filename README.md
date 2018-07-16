@@ -68,7 +68,7 @@ All fingers of the hand equipped with encoders: 2 quadrature encoders for thumb 
 ![Alt Text](https://github.com/tursynbekoff/robotic_hand/blob/master/REPORT_git/PCB.jpg)
 ![Alt Text](https://github.com/tursynbekoff/robotic_hand/blob/master/REPORT_git/PCB_old_vs_new.jpg)
 ![Alt Text](https://github.com/tursynbekoff/robotic_hand/blob/master/REPORT_git/new_PCB_housing.jpg)
-Full PCB design could be found from the following [link](https://circuitmaker.com/Projects/Details/Talgat-Tursynbekov/Robotic-hand). Full **script** for hand controll is [here](https://github.com/tursynbekoff/robotic_hand/tree/master/Control/hand_control_1.0). 
+Full **PCB** design could be found from the following [link](https://circuitmaker.com/Projects/Details/Talgat-Tursynbekov/Robotic-hand). Full **script** for hand controll is [here](https://github.com/tursynbekoff/robotic_hand/tree/master/Control/hand_control_1.0). 
 
 
 
