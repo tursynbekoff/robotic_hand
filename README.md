@@ -67,7 +67,8 @@ In addition, household objects with complex geometrical configuration, as screwd
 currently working on adaptive underactuated mechanism for fingers
 
 ![Demo](https://github.com/tursynbekoff/robotic_hand/blob/master/REPORT_git/Finger_Mechanism.gif)
-CAD files for finger are [here](https://github.com/tursynbekoff/robotic_hand/tree/master/test_finger)  
+CAD files for finger are [here](https://github.com/tursynbekoff/robotic_hand/tree/master/test_finger)
+![Demo](https://github.com/tursynbekoff/robotic_hand/blob/master/REPORT_git/ezgif.com-rotate.gif)
 
 ## Control of the hand
 
