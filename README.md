@@ -5,7 +5,7 @@ The anthropomorphic hand consist of mechanical design and electrical components 
 *  3D Design of the Hand 
 *  Control of the hand 
 
-## 3D Design of the Hand
+## 3D Design of the Hand 1.0
 The robotic hand is still under iprovement and development stage. Here is shown previous models and developmemt steps that have been done. First model of the hand was done not by me and in a limited period of time. My goal is to improve design and eliminate problems from initial model. 
 
 ### Problems of the initial model
@@ -45,7 +45,6 @@ The next iteration was connection of mechanical part with electrical components.
 As a result, the final CAD model of the thumb can perform extension, flexion and abduction, adduction movements. The main difference between initial and the final model of the thumb, it can perform under-actuated adaptive motion, which means the thumb can wrap around object with complex geometrical shape and simplifies the control of the thumb. Full up-to-date CAD model of the hand is [here](https://github.com/tursynbekoff/robotic_hand/tree/master/CAD).
 
 
-
 ### Holding objects
 
 [![IMAGE ALT TEXT HERE](https://github.com/tursynbekoff/robotic_hand/blob/master/REPORT_git/youtube.PNG)](https://youtu.be/hmZBOrk-Xx8)
@@ -61,6 +60,12 @@ performed grabbing with aid of manual manipulation. The hand securely holds all 
 ![Alt Text](https://github.com/tursynbekoff/robotic_hand/blob/master/REPORT_git/pen-min.JPG)
 
 In addition, household objects with complex geometrical configuration, as screwdriver, were tested. The hand can grab the objects with external manipulation and securely hold objects at specific position. The hand has potential to be used as prosthesis.
+
+## Hand 2.0
+### New Finger Mechanism
+currently working on adaptive underactuated mechanism for fingers
+
+![Demo](https://github.com/tursynbekoff/robotic_hand/blob/master/REPORT_git/Finger_Mechanism.gif)
 
 ## Control of the hand
 
