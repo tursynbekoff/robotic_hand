@@ -71,6 +71,9 @@ CAD files for finger are [here](https://github.com/tursynbekoff/robotic_hand/tre
 
 ![Demo](https://github.com/tursynbekoff/robotic_hand/blob/master/REPORT_git/ezgif.com-rotate.gif)
 
+New hand with rail sysem for stablitity and robustness is under integration process.
+![New hand](https://github.com/tursynbekoff/robotic_hand/blob/master/REPORT_git/New_hand_1.JPG)
+
 ## Control of the hand
 
 All fingers of the hand equipped with encoders: 2 quadrature encoders for thumb and position sensor for other fingers. This is necessary to receive position feedback and avoid critical points, that can destroy finger structure and motor. There are six brushless DC motors that require dual motor drivers (DRV8835). For dual motor driver, 4 motor control signals (2 signal per motor) is sent from Arduino. The signal to the motors must be PWM, while the other zero to move in one direct, the opposite to move in reverse direction. If both signals are zero, motor stops. Apart from that, 10V with 1A power is connected to Vcc that is supplied to the motors. Initially all the electrical components were connected to the breadbord. Breadbord caused many hardware problems with robustness of the system. As a result, the idea of creating PCB was in demand. PCB was designed in CicuitMaker(open source free software). New PCB eliminates potential hardware failures and serves as a 6-channel Arduino motor shield and I/O for digital and analog pins. In addition, to secure from environment and potential mechanical failure, housing was developed and files for housing could be found in the folder [Housing](https://github.com/tursynbekoff/robotic_hand/tree/master/Housing).
