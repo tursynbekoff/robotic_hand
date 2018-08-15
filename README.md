@@ -73,6 +73,8 @@ CAD files for finger are [here](https://github.com/tursynbekoff/robotic_hand/tre
 
 New hand with rail sysem for stablitity and robustness is under integration process.
 ![New hand](https://github.com/tursynbekoff/robotic_hand/blob/master/REPORT_git/New_hand_1.JPG)
+Cross structure is used for stiffness and strength to hold rails stable. Rails are used to navigate motor joint part from rotational to linear motion. Earlier there was no rail system and there were parisite vibration in all directions which created disturbance in postion sensor readings. 
+![New hand](https://github.com/tursynbekoff/robotic_hand/blob/master/REPORT_git/New_hand.JPG)
 
 ## Control of the hand
 
