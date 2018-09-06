@@ -171,6 +171,7 @@ void loop() {
         digitalWrite(AIN_2, LOW);
         x = 0;
         y = 0;
+        
         encoder0PosR = 0;
         encoder1PosR = 0;
         rotateVal7 = 0;
